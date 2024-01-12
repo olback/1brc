@@ -8,7 +8,7 @@ $CARGO_TARGET_DIR/release/brc > output.txt  120.64s user 1.22s system 740% cpu 1
 
 ### Test data:
 ```
-curl https://static.olback.dev/measurements.txt -o measurements.txt # ~ 14 GB
+curl https://static.olback.dev/measurements.txt -o measurements.txt # ~ 14 GB, sha1sum = 3ac95a1fceb2c096813a9f90fa8900cc15729313
 ```
 
 ### Build:
