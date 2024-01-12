@@ -1,0 +1,413 @@
+Abha                 min: -33.3°C, max:  67.5°C, mean:  18.0°C
+Abidjan              min: -22.8°C, max:  78.3°C, mean:  26.0°C
+Abéché               min: -22.9°C, max:  86.4°C, mean:  29.4°C
+Accra                min: -22.9°C, max:  74.9°C, mean:  26.4°C
+Addis Ababa          min: -32.8°C, max:  68.3°C, mean:  16.0°C
+Adelaide             min: -30.5°C, max:  65.7°C, mean:  17.3°C
+Aden                 min: -18.7°C, max:  77.0°C, mean:  29.1°C
+Ahvaz                min: -24.0°C, max:  74.9°C, mean:  25.4°C
+Albuquerque          min: -33.8°C, max:  60.3°C, mean:  14.0°C
+Alexandra            min: -37.8°C, max:  59.7°C, mean:  11.0°C
+Alexandria           min: -29.3°C, max:  70.5°C, mean:  20.0°C
+Algiers              min: -29.4°C, max:  68.8°C, mean:  18.2°C
+Alice Springs        min: -27.3°C, max:  68.6°C, mean:  21.0°C
+Almaty               min: -39.6°C, max:  59.6°C, mean:  10.0°C
+Amsterdam            min: -39.5°C, max:  59.7°C, mean:  10.2°C
+Anadyr               min: -60.7°C, max:  40.3°C, mean:  -6.9°C
+Anchorage            min: -48.0°C, max:  52.7°C, mean:   2.8°C
+Andorra la Vella     min: -40.2°C, max:  58.6°C, mean:   9.8°C
+Ankara               min: -37.3°C, max:  61.7°C, mean:  12.0°C
+Antananarivo         min: -29.3°C, max:  67.0°C, mean:  17.9°C
+Antsiranana          min: -25.3°C, max:  78.4°C, mean:  25.2°C
+Arkhangelsk          min: -48.5°C, max:  49.1°C, mean:   1.3°C
+Ashgabat             min: -35.2°C, max:  70.0°C, mean:  17.1°C
+Asmara               min: -34.2°C, max:  64.3°C, mean:  15.6°C
+Assab                min: -19.3°C, max:  81.6°C, mean:  30.5°C
+Astana               min: -46.5°C, max:  52.0°C, mean:   3.5°C
+Athens               min: -30.1°C, max:  74.9°C, mean:  19.2°C
+Atlanta              min: -35.1°C, max:  68.9°C, mean:  17.0°C
+Auckland             min: -34.8°C, max:  64.7°C, mean:  15.2°C
+Austin               min: -29.5°C, max:  70.2°C, mean:  20.7°C
+Baghdad              min: -29.2°C, max:  73.9°C, mean:  22.8°C
+Baguio               min: -29.0°C, max:  72.4°C, mean:  19.5°C
+Baku                 min: -34.3°C, max:  67.7°C, mean:  15.1°C
+Baltimore            min: -37.7°C, max:  60.4°C, mean:  13.1°C
+Bamako               min: -21.6°C, max:  81.1°C, mean:  27.8°C
+Bangkok              min: -23.2°C, max:  81.1°C, mean:  28.6°C
+Bangui               min: -26.5°C, max:  76.0°C, mean:  26.0°C
+Banjul               min: -26.2°C, max:  74.2°C, mean:  26.0°C
+Barcelona            min: -30.9°C, max:  67.7°C, mean:  18.2°C
+Bata                 min: -30.2°C, max:  75.5°C, mean:  25.1°C
+Batumi               min: -38.5°C, max:  59.8°C, mean:  14.0°C
+Beijing              min: -38.6°C, max:  61.5°C, mean:  12.9°C
+Beirut               min: -33.9°C, max:  70.7°C, mean:  20.9°C
+Belgrade             min: -39.0°C, max:  58.5°C, mean:  12.5°C
+Belize City          min: -23.7°C, max:  76.6°C, mean:  26.7°C
+Benghazi             min: -28.4°C, max:  69.4°C, mean:  19.9°C
+Bergen               min: -46.8°C, max:  57.2°C, mean:   7.7°C
+Berlin               min: -40.3°C, max:  63.0°C, mean:  10.3°C
+Bilbao               min: -35.4°C, max:  65.2°C, mean:  14.7°C
+Birao                min: -21.4°C, max:  81.2°C, mean:  26.5°C
+Bishkek              min: -40.4°C, max:  61.2°C, mean:  11.3°C
+Bissau               min: -25.3°C, max:  77.7°C, mean:  27.0°C
+Blantyre             min: -28.2°C, max:  72.1°C, mean:  22.2°C
+Bloemfontein         min: -32.6°C, max:  67.3°C, mean:  15.6°C
+Boise                min: -36.0°C, max:  59.9°C, mean:  11.4°C
+Bordeaux             min: -36.4°C, max:  63.9°C, mean:  14.2°C
+Bosaso               min: -23.0°C, max:  87.6°C, mean:  30.0°C
+Boston               min: -36.2°C, max:  60.4°C, mean:  10.9°C
+Bouaké               min: -21.5°C, max:  82.1°C, mean:  26.0°C
+Bratislava           min: -39.9°C, max:  57.9°C, mean:  10.5°C
+Brazzaville          min: -26.3°C, max:  74.1°C, mean:  25.0°C
+Bridgetown           min: -25.0°C, max:  76.9°C, mean:  27.0°C
+Brisbane             min: -28.6°C, max:  71.2°C, mean:  21.4°C
+Brussels             min: -42.0°C, max:  60.1°C, mean:  10.5°C
+Bucharest            min: -38.1°C, max:  60.4°C, mean:  10.8°C
+Budapest             min: -43.1°C, max:  64.9°C, mean:  11.3°C
+Bujumbura            min: -30.0°C, max:  80.4°C, mean:  23.8°C
+Bulawayo             min: -29.6°C, max:  68.1°C, mean:  18.9°C
+Burnie               min: -38.7°C, max:  61.9°C, mean:  13.1°C
+Busan                min: -36.0°C, max:  66.5°C, mean:  15.0°C
+Cabo San Lucas       min: -23.7°C, max:  72.7°C, mean:  23.9°C
+Cairns               min: -24.6°C, max:  73.5°C, mean:  25.0°C
+Cairo                min: -30.0°C, max:  69.3°C, mean:  21.4°C
+Calgary              min: -46.2°C, max:  57.1°C, mean:   4.4°C
+Canberra             min: -37.5°C, max:  64.1°C, mean:  13.1°C
+Cape Town            min: -35.0°C, max:  63.1°C, mean:  16.2°C
+Changsha             min: -37.5°C, max:  67.1°C, mean:  17.4°C
+Charlotte            min: -33.1°C, max:  65.7°C, mean:  16.1°C
+Chiang Mai           min: -21.3°C, max:  77.9°C, mean:  25.8°C
+Chicago              min: -40.6°C, max:  57.8°C, mean:   9.8°C
+Chihuahua            min: -32.9°C, max:  67.4°C, mean:  18.6°C
+Chittagong           min: -30.2°C, max:  79.9°C, mean:  25.9°C
+Chișinău             min: -38.8°C, max:  61.6°C, mean:  10.2°C
+Chongqing            min: -32.4°C, max:  73.4°C, mean:  18.6°C
+Christchurch         min: -35.3°C, max:  62.4°C, mean:  12.2°C
+City of San Marino   min: -36.7°C, max:  60.1°C, mean:  11.8°C
+Colombo              min: -23.7°C, max:  82.5°C, mean:  27.4°C
+Columbus             min: -39.1°C, max:  62.5°C, mean:  11.7°C
+Conakry              min: -23.4°C, max:  73.1°C, mean:  26.4°C
+Copenhagen           min: -45.0°C, max:  58.7°C, mean:   9.1°C
+Cotonou              min: -28.7°C, max:  78.8°C, mean:  27.2°C
+Cracow               min: -41.0°C, max:  59.7°C, mean:   9.3°C
+Da Lat               min: -29.1°C, max:  65.9°C, mean:  17.9°C
+Da Nang              min: -24.2°C, max:  78.8°C, mean:  25.8°C
+Dakar                min: -26.8°C, max:  79.9°C, mean:  24.0°C
+Dallas               min: -28.4°C, max:  69.5°C, mean:  19.0°C
+Damascus             min: -31.5°C, max:  71.1°C, mean:  17.0°C
+Dampier              min: -21.7°C, max:  85.5°C, mean:  26.4°C
+Dar es Salaam        min: -23.2°C, max:  75.5°C, mean:  25.8°C
+Darwin               min: -24.4°C, max:  79.2°C, mean:  27.6°C
+Denpasar             min: -27.2°C, max:  77.9°C, mean:  23.7°C
+Denver               min: -39.0°C, max:  62.0°C, mean:  10.4°C
+Detroit              min: -36.4°C, max:  57.5°C, mean:  10.0°C
+Dhaka                min: -24.8°C, max:  73.8°C, mean:  25.9°C
+Dikson               min: -67.1°C, max:  39.2°C, mean: -11.1°C
+Dili                 min: -20.8°C, max:  83.6°C, mean:  26.6°C
+Djibouti             min: -18.6°C, max:  85.8°C, mean:  29.9°C
+Dodoma               min: -29.7°C, max:  77.2°C, mean:  22.7°C
+Dolisie              min: -26.4°C, max:  79.3°C, mean:  24.0°C
+Douala               min: -20.2°C, max:  77.3°C, mean:  26.7°C
+Dubai                min: -23.3°C, max:  77.7°C, mean:  26.9°C
+Dublin               min: -40.3°C, max:  58.0°C, mean:   9.8°C
+Dunedin              min: -43.8°C, max:  60.9°C, mean:  11.1°C
+Durban               min: -30.3°C, max:  78.2°C, mean:  20.6°C
+Dushanbe             min: -35.4°C, max:  66.2°C, mean:  14.7°C
+Edinburgh            min: -40.6°C, max:  59.6°C, mean:   9.3°C
+Edmonton             min: -46.4°C, max:  53.8°C, mean:   4.2°C
+El Paso              min: -31.9°C, max:  69.1°C, mean:  18.1°C
+Entebbe              min: -28.2°C, max:  69.9°C, mean:  21.0°C
+Erbil                min: -30.6°C, max:  77.3°C, mean:  19.5°C
+Erzurum              min: -49.1°C, max:  52.4°C, mean:   5.1°C
+Fairbanks            min: -56.1°C, max:  45.6°C, mean:  -2.3°C
+Fianarantsoa         min: -33.5°C, max:  67.0°C, mean:  17.9°C
+Flores,  Petén       min: -26.9°C, max:  75.1°C, mean:  26.4°C
+Frankfurt            min: -40.3°C, max:  58.2°C, mean:  10.6°C
+Fresno               min: -31.4°C, max:  65.2°C, mean:  17.9°C
+Fukuoka              min: -32.7°C, max:  63.8°C, mean:  17.0°C
+Gaborone             min: -31.4°C, max:  79.2°C, mean:  21.0°C
+Gabès                min: -28.7°C, max:  71.6°C, mean:  19.5°C
+Gagnoa               min: -25.2°C, max:  73.8°C, mean:  26.0°C
+Gangtok              min: -32.6°C, max:  62.5°C, mean:  15.2°C
+Garissa              min: -16.8°C, max:  77.2°C, mean:  29.3°C
+Garoua               min: -20.8°C, max:  77.3°C, mean:  28.3°C
+George Town          min: -21.4°C, max:  79.2°C, mean:  27.9°C
+Ghanzi               min: -25.9°C, max:  74.5°C, mean:  21.4°C
+Gjoa Haven           min: -68.6°C, max:  35.7°C, mean: -14.4°C
+Guadalajara          min: -29.2°C, max:  74.7°C, mean:  20.9°C
+Guangzhou            min: -26.2°C, max:  70.5°C, mean:  22.4°C
+Guatemala City       min: -29.5°C, max:  69.2°C, mean:  20.4°C
+Halifax              min: -40.9°C, max:  62.0°C, mean:   7.5°C
+Hamburg              min: -38.5°C, max:  58.6°C, mean:   9.7°C
+Hamilton             min: -38.7°C, max:  65.7°C, mean:  13.8°C
+Hanga Roa            min: -34.4°C, max:  71.9°C, mean:  20.5°C
+Hanoi                min: -26.6°C, max:  72.7°C, mean:  23.6°C
+Harare               min: -34.3°C, max:  66.0°C, mean:  18.4°C
+Harbin               min: -45.1°C, max:  59.9°C, mean:   5.0°C
+Hargeisa             min: -28.8°C, max:  76.0°C, mean:  21.7°C
+Hat Yai              min: -26.2°C, max:  76.3°C, mean:  27.0°C
+Havana               min: -24.7°C, max:  76.8°C, mean:  25.2°C
+Helsinki             min: -43.4°C, max:  54.8°C, mean:   5.9°C
+Heraklion            min: -31.7°C, max:  69.2°C, mean:  18.9°C
+Hiroshima            min: -33.1°C, max:  68.5°C, mean:  16.3°C
+Ho Chi Minh City     min: -19.8°C, max:  77.3°C, mean:  27.4°C
+Hobart               min: -36.9°C, max:  66.8°C, mean:  12.7°C
+Hong Kong            min: -29.3°C, max:  76.6°C, mean:  23.3°C
+Honiara              min: -22.5°C, max:  77.4°C, mean:  26.5°C
+Honolulu             min: -23.6°C, max:  75.8°C, mean:  25.4°C
+Houston              min: -29.6°C, max:  67.5°C, mean:  20.8°C
+Ifrane               min: -45.6°C, max:  62.6°C, mean:  11.4°C
+Indianapolis         min: -40.4°C, max:  64.9°C, mean:  11.8°C
+Iqaluit              min: -58.7°C, max:  38.3°C, mean:  -9.3°C
+Irkutsk              min: -51.0°C, max:  50.7°C, mean:   1.0°C
+Istanbul             min: -37.9°C, max:  63.8°C, mean:  13.9°C
+Jacksonville         min: -31.6°C, max:  69.2°C, mean:  20.3°C
+Jakarta              min: -30.5°C, max:  77.2°C, mean:  26.7°C
+Jayapura             min: -33.0°C, max:  82.2°C, mean:  27.0°C
+Jerusalem            min: -28.2°C, max:  65.1°C, mean:  18.3°C
+Johannesburg         min: -38.5°C, max:  64.6°C, mean:  15.5°C
+Jos                  min: -30.9°C, max:  71.9°C, mean:  22.8°C
+Juba                 min: -18.9°C, max:  75.3°C, mean:  27.8°C
+Kabul                min: -37.2°C, max:  61.2°C, mean:  12.1°C
+Kampala              min: -28.8°C, max:  71.6°C, mean:  20.0°C
+Kandi                min: -22.3°C, max:  79.9°C, mean:  27.7°C
+Kankan               min: -22.1°C, max:  73.5°C, mean:  26.5°C
+Kano                 min: -24.3°C, max:  75.9°C, mean:  26.4°C
+Kansas City          min: -36.6°C, max:  65.5°C, mean:  12.5°C
+Karachi              min: -24.9°C, max:  75.1°C, mean:  26.0°C
+Karonga              min: -24.5°C, max:  71.4°C, mean:  24.4°C
+Kathmandu            min: -32.3°C, max:  66.3°C, mean:  18.3°C
+Khartoum             min: -18.0°C, max:  80.5°C, mean:  29.9°C
+Kingston             min: -23.0°C, max:  76.0°C, mean:  27.4°C
+Kinshasa             min: -28.6°C, max:  76.2°C, mean:  25.3°C
+Kolkata              min: -22.0°C, max:  77.9°C, mean:  26.7°C
+Kuala Lumpur         min: -21.6°C, max:  80.8°C, mean:  27.3°C
+Kumasi               min: -22.4°C, max:  76.0°C, mean:  26.0°C
+Kunming              min: -35.6°C, max:  65.4°C, mean:  15.7°C
+Kuopio               min: -50.4°C, max:  55.3°C, mean:   3.4°C
+Kuwait City          min: -23.1°C, max:  75.2°C, mean:  25.7°C
+Kyiv                 min: -52.1°C, max:  57.3°C, mean:   8.4°C
+Kyoto                min: -33.1°C, max:  64.6°C, mean:  15.8°C
+La Ceiba             min: -21.5°C, max:  72.5°C, mean:  26.2°C
+La Paz               min: -26.9°C, max:  74.1°C, mean:  23.7°C
+Lagos                min: -23.5°C, max:  76.3°C, mean:  26.8°C
+Lahore               min: -27.6°C, max:  76.6°C, mean:  24.3°C
+Lake Havasu City     min: -28.7°C, max:  72.4°C, mean:  23.7°C
+Lake Tekapo          min: -44.8°C, max:  59.1°C, mean:   8.7°C
+Las Palmas de Gran Canaria min: -29.8°C, max:  72.3°C, mean:  21.2°C
+Las Vegas            min: -28.9°C, max:  69.9°C, mean:  20.3°C
+Launceston           min: -34.9°C, max:  61.4°C, mean:  13.1°C
+Lhasa                min: -45.3°C, max:  56.3°C, mean:   7.6°C
+Libreville           min: -23.9°C, max:  74.5°C, mean:  25.9°C
+Lisbon               min: -35.2°C, max:  64.6°C, mean:  17.5°C
+Livingstone          min: -29.3°C, max:  71.6°C, mean:  21.8°C
+Ljubljana            min: -42.3°C, max:  61.1°C, mean:  10.9°C
+Lodwar               min: -18.7°C, max:  78.0°C, mean:  29.3°C
+Lomé                 min: -27.1°C, max:  75.2°C, mean:  26.9°C
+London               min: -39.7°C, max:  58.7°C, mean:  11.3°C
+Los Angeles          min: -33.7°C, max:  71.0°C, mean:  18.6°C
+Louisville           min: -36.4°C, max:  70.7°C, mean:  13.9°C
+Luanda               min: -24.9°C, max:  73.9°C, mean:  25.8°C
+Lubumbashi           min: -30.3°C, max:  73.1°C, mean:  20.8°C
+Lusaka               min: -33.0°C, max:  69.9°C, mean:  19.9°C
+Luxembourg City      min: -41.2°C, max:  59.3°C, mean:   9.3°C
+Lviv                 min: -44.5°C, max:  59.5°C, mean:   7.8°C
+Lyon                 min: -39.3°C, max:  61.0°C, mean:  12.5°C
+Madrid               min: -35.5°C, max:  64.3°C, mean:  15.0°C
+Mahajanga            min: -24.8°C, max:  77.3°C, mean:  26.3°C
+Makassar             min: -21.8°C, max:  81.0°C, mean:  26.7°C
+Makurdi              min: -23.8°C, max:  76.4°C, mean:  26.0°C
+Malabo               min: -21.7°C, max:  74.4°C, mean:  26.3°C
+Malé                 min: -22.1°C, max:  78.1°C, mean:  28.0°C
+Managua              min: -21.3°C, max:  75.7°C, mean:  27.3°C
+Manama               min: -24.6°C, max:  75.2°C, mean:  26.5°C
+Mandalay             min: -20.8°C, max:  77.6°C, mean:  28.0°C
+Mango                min: -26.1°C, max:  77.8°C, mean:  28.1°C
+Manila               min: -20.4°C, max:  75.3°C, mean:  28.4°C
+Maputo               min: -26.1°C, max:  69.6°C, mean:  22.8°C
+Marrakesh            min: -29.5°C, max:  69.1°C, mean:  19.6°C
+Marseille            min: -34.2°C, max:  65.4°C, mean:  15.8°C
+Maun                 min: -30.7°C, max:  72.0°C, mean:  22.4°C
+Medan                min: -21.7°C, max:  75.7°C, mean:  26.5°C
+Mek'ele              min: -26.1°C, max:  73.7°C, mean:  22.7°C
+Melbourne            min: -33.4°C, max:  62.9°C, mean:  15.1°C
+Memphis              min: -34.3°C, max:  68.3°C, mean:  17.2°C
+Mexicali             min: -27.7°C, max:  76.9°C, mean:  23.1°C
+Mexico City          min: -31.3°C, max:  66.3°C, mean:  17.5°C
+Miami                min: -24.2°C, max:  74.3°C, mean:  24.9°C
+Milan                min: -37.3°C, max:  65.7°C, mean:  13.0°C
+Milwaukee            min: -47.9°C, max:  59.5°C, mean:   8.9°C
+Minneapolis          min: -42.4°C, max:  56.8°C, mean:   7.8°C
+Minsk                min: -44.5°C, max:  56.6°C, mean:   6.7°C
+Mogadishu            min: -21.7°C, max:  75.6°C, mean:  27.1°C
+Mombasa              min: -24.2°C, max:  77.2°C, mean:  26.3°C
+Monaco               min: -33.8°C, max:  65.2°C, mean:  16.4°C
+Moncton              min: -47.9°C, max:  52.7°C, mean:   6.1°C
+Monterrey            min: -27.2°C, max:  70.0°C, mean:  22.3°C
+Montreal             min: -44.3°C, max:  63.8°C, mean:   6.8°C
+Moscow               min: -43.3°C, max:  58.3°C, mean:   5.8°C
+Mumbai               min: -21.4°C, max:  77.6°C, mean:  27.1°C
+Murmansk             min: -47.8°C, max:  53.2°C, mean:   0.6°C
+Muscat               min: -21.5°C, max:  77.3°C, mean:  28.0°C
+Mzuzu                min: -33.0°C, max:  67.4°C, mean:  17.7°C
+N'Djamena            min: -18.2°C, max:  77.6°C, mean:  28.3°C
+Naha                 min: -24.9°C, max:  73.7°C, mean:  23.1°C
+Nairobi              min: -31.1°C, max:  72.3°C, mean:  17.8°C
+Nakhon Ratchasima    min: -20.2°C, max:  77.6°C, mean:  27.3°C
+Napier               min: -33.4°C, max:  68.6°C, mean:  14.6°C
+Napoli               min: -34.4°C, max:  66.0°C, mean:  15.9°C
+Nashville            min: -37.7°C, max:  63.8°C, mean:  15.4°C
+Nassau               min: -24.0°C, max:  72.6°C, mean:  24.6°C
+Ndola                min: -32.8°C, max:  71.1°C, mean:  20.3°C
+New Delhi            min: -28.0°C, max:  76.9°C, mean:  25.0°C
+New Orleans          min: -32.1°C, max:  70.1°C, mean:  20.7°C
+New York City        min: -35.3°C, max:  63.5°C, mean:  12.9°C
+Ngaoundéré           min: -28.6°C, max:  72.7°C, mean:  22.0°C
+Niamey               min: -25.2°C, max:  80.6°C, mean:  29.3°C
+Nicosia              min: -29.6°C, max:  65.5°C, mean:  19.7°C
+Niigata              min: -33.1°C, max:  70.7°C, mean:  13.9°C
+Nouadhibou           min: -25.9°C, max:  70.9°C, mean:  21.3°C
+Nouakchott           min: -27.9°C, max:  78.4°C, mean:  25.7°C
+Novosibirsk          min: -49.6°C, max:  51.3°C, mean:   1.7°C
+Nuuk                 min: -48.5°C, max:  49.9°C, mean:  -1.4°C
+Odesa                min: -44.9°C, max:  62.4°C, mean:  10.7°C
+Odienné              min: -22.2°C, max:  85.5°C, mean:  26.0°C
+Oklahoma City        min: -34.3°C, max:  67.7°C, mean:  15.9°C
+Omaha                min: -36.8°C, max:  63.8°C, mean:  10.6°C
+Oranjestad           min: -20.5°C, max:  75.5°C, mean:  28.1°C
+Oslo                 min: -43.9°C, max:  55.9°C, mean:   5.7°C
+Ottawa               min: -40.1°C, max:  56.4°C, mean:   6.6°C
+Ouagadougou          min: -20.7°C, max:  77.7°C, mean:  28.3°C
+Ouahigouya           min: -23.7°C, max:  78.4°C, mean:  28.6°C
+Ouarzazate           min: -29.1°C, max:  67.9°C, mean:  18.9°C
+Oulu                 min: -47.7°C, max:  51.7°C, mean:   2.7°C
+Palembang            min: -22.5°C, max:  83.3°C, mean:  27.3°C
+Palermo              min: -29.9°C, max:  66.1°C, mean:  18.5°C
+Palm Springs         min: -23.6°C, max:  72.1°C, mean:  24.5°C
+Palmerston North     min: -37.5°C, max:  63.5°C, mean:  13.2°C
+Panama City          min: -18.5°C, max:  79.8°C, mean:  28.0°C
+Parakou              min: -23.7°C, max:  78.6°C, mean:  26.8°C
+Paris                min: -37.4°C, max:  68.0°C, mean:  12.3°C
+Perth                min: -28.5°C, max:  71.4°C, mean:  18.7°C
+Petropavlovsk-Kamchatsky min: -45.1°C, max:  53.0°C, mean:   1.9°C
+Philadelphia         min: -34.3°C, max:  62.6°C, mean:  13.2°C
+Phnom Penh           min: -27.0°C, max:  78.5°C, mean:  28.3°C
+Phoenix              min: -29.6°C, max:  72.4°C, mean:  23.9°C
+Pittsburgh           min: -38.4°C, max:  60.6°C, mean:  10.8°C
+Podgorica            min: -33.1°C, max:  70.2°C, mean:  15.3°C
+Pointe-Noire         min: -29.9°C, max:  75.3°C, mean:  26.1°C
+Pontianak            min: -23.2°C, max:  78.9°C, mean:  27.7°C
+Port Moresby         min: -21.3°C, max:  76.8°C, mean:  26.9°C
+Port Sudan           min: -30.9°C, max:  78.0°C, mean:  28.4°C
+Port Vila            min: -27.5°C, max:  71.5°C, mean:  24.3°C
+Port-Gentil          min: -26.4°C, max:  75.5°C, mean:  26.0°C
+Portland (OR)        min: -36.4°C, max:  62.4°C, mean:  12.4°C
+Porto                min: -33.9°C, max:  64.7°C, mean:  15.7°C
+Prague               min: -41.7°C, max:  58.0°C, mean:   8.4°C
+Praia                min: -28.1°C, max:  74.2°C, mean:  24.4°C
+Pretoria             min: -40.8°C, max:  67.2°C, mean:  18.2°C
+Pyongyang            min: -38.5°C, max:  60.0°C, mean:  10.8°C
+Rabat                min: -34.3°C, max:  64.9°C, mean:  17.2°C
+Rangpur              min: -31.0°C, max:  77.3°C, mean:  24.4°C
+Reggane              min: -21.5°C, max:  77.2°C, mean:  28.3°C
+Reykjavík            min: -47.5°C, max:  52.7°C, mean:   4.3°C
+Riga                 min: -42.4°C, max:  57.1°C, mean:   6.2°C
+Riyadh               min: -22.2°C, max:  75.5°C, mean:  26.0°C
+Rome                 min: -36.5°C, max:  67.8°C, mean:  15.2°C
+Roseau               min: -25.7°C, max:  76.4°C, mean:  26.2°C
+Rostov-on-Don        min: -41.1°C, max:  57.1°C, mean:   9.9°C
+Sacramento           min: -37.9°C, max:  64.0°C, mean:  16.3°C
+Saint Petersburg     min: -46.2°C, max:  53.3°C, mean:   5.8°C
+Saint-Pierre         min: -43.8°C, max:  54.3°C, mean:   5.7°C
+Salt Lake City       min: -40.1°C, max:  61.5°C, mean:  11.6°C
+San Antonio          min: -28.4°C, max:  72.6°C, mean:  20.8°C
+San Diego            min: -38.6°C, max:  73.3°C, mean:  17.8°C
+San Francisco        min: -34.2°C, max:  62.4°C, mean:  14.6°C
+San Jose             min: -33.8°C, max:  66.6°C, mean:  16.4°C
+San José             min: -31.3°C, max:  74.1°C, mean:  22.6°C
+San Juan             min: -25.8°C, max:  78.0°C, mean:  27.2°C
+San Salvador         min: -30.7°C, max:  77.3°C, mean:  23.1°C
+Sana'a               min: -28.6°C, max:  71.8°C, mean:  20.0°C
+Santo Domingo        min: -22.0°C, max:  74.0°C, mean:  25.9°C
+Sapporo              min: -43.9°C, max:  58.8°C, mean:   8.9°C
+Sarajevo             min: -41.0°C, max:  64.4°C, mean:  10.1°C
+Saskatoon            min: -45.5°C, max:  53.6°C, mean:   3.3°C
+Seattle              min: -35.4°C, max:  60.7°C, mean:  11.3°C
+Seoul                min: -42.1°C, max:  61.4°C, mean:  12.5°C
+Seville              min: -30.5°C, max:  74.9°C, mean:  19.2°C
+Shanghai             min: -33.1°C, max:  68.7°C, mean:  16.7°C
+Singapore            min: -23.2°C, max:  75.7°C, mean:  27.0°C
+Skopje               min: -38.7°C, max:  59.8°C, mean:  12.4°C
+Sochi                min: -34.3°C, max:  68.4°C, mean:  14.2°C
+Sofia                min: -42.1°C, max:  61.7°C, mean:  10.6°C
+Sokoto               min: -20.5°C, max:  79.0°C, mean:  28.0°C
+Split                min: -33.7°C, max:  64.1°C, mean:  16.1°C
+St. John's           min: -43.5°C, max:  55.6°C, mean:   5.0°C
+St. Louis            min: -35.6°C, max:  64.6°C, mean:  13.9°C
+Stockholm            min: -44.0°C, max:  54.3°C, mean:   6.6°C
+Surabaya             min: -21.4°C, max:  75.5°C, mean:  27.1°C
+Suva                 min: -21.5°C, max:  75.5°C, mean:  25.6°C
+Suwałki              min: -43.8°C, max:  57.8°C, mean:   7.2°C
+Sydney               min: -31.8°C, max:  73.0°C, mean:  17.7°C
+Ségou                min: -21.4°C, max:  78.2°C, mean:  28.0°C
+Tabora               min: -24.9°C, max:  70.3°C, mean:  23.0°C
+Tabriz               min: -37.2°C, max:  62.3°C, mean:  12.6°C
+Taipei               min: -29.2°C, max:  70.0°C, mean:  23.0°C
+Tallinn              min: -43.2°C, max:  54.2°C, mean:   6.4°C
+Tamale               min: -21.7°C, max:  78.8°C, mean:  27.9°C
+Tamanrasset          min: -29.3°C, max:  71.1°C, mean:  21.7°C
+Tampa                min: -26.6°C, max:  69.8°C, mean:  22.9°C
+Tashkent             min: -36.5°C, max:  62.3°C, mean:  14.8°C
+Tauranga             min: -33.9°C, max:  63.0°C, mean:  14.8°C
+Tbilisi              min: -38.7°C, max:  61.1°C, mean:  12.9°C
+Tegucigalpa          min: -28.0°C, max:  70.0°C, mean:  21.7°C
+Tehran               min: -32.3°C, max:  69.4°C, mean:  17.0°C
+Tel Aviv             min: -28.2°C, max:  68.3°C, mean:  20.0°C
+Thessaloniki         min: -32.7°C, max:  64.6°C, mean:  16.0°C
+Thiès                min: -29.3°C, max:  72.8°C, mean:  24.0°C
+Tijuana              min: -32.3°C, max:  66.2°C, mean:  17.8°C
+Timbuktu             min: -21.1°C, max:  80.4°C, mean:  28.0°C
+Tirana               min: -32.5°C, max:  64.2°C, mean:  15.2°C
+Toamasina            min: -28.7°C, max:  72.0°C, mean:  23.4°C
+Tokyo                min: -37.4°C, max:  63.3°C, mean:  15.4°C
+Toliara              min: -27.7°C, max:  76.5°C, mean:  24.1°C
+Toluca               min: -36.4°C, max:  71.0°C, mean:  12.4°C
+Toronto              min: -44.9°C, max:  58.4°C, mean:   9.4°C
+Tripoli              min: -33.0°C, max:  68.3°C, mean:  20.0°C
+Tromsø               min: -44.0°C, max:  51.9°C, mean:   2.9°C
+Tucson               min: -32.5°C, max:  73.4°C, mean:  20.9°C
+Tunis                min: -28.6°C, max:  67.1°C, mean:  18.4°C
+Ulaanbaatar          min: -50.0°C, max:  47.7°C, mean:  -0.4°C
+Upington             min: -29.3°C, max:  73.5°C, mean:  20.4°C
+Vaduz                min: -39.2°C, max:  60.4°C, mean:  10.1°C
+Valencia             min: -30.1°C, max:  66.1°C, mean:  18.3°C
+Valletta             min: -32.5°C, max:  70.2°C, mean:  18.8°C
+Vancouver            min: -43.6°C, max:  58.2°C, mean:  10.4°C
+Veracruz             min: -23.1°C, max:  76.3°C, mean:  25.4°C
+Vienna               min: -41.7°C, max:  58.7°C, mean:  10.4°C
+Vientiane            min: -20.7°C, max:  77.4°C, mean:  25.9°C
+Villahermosa         min: -24.3°C, max:  75.4°C, mean:  27.1°C
+Vilnius              min: -42.0°C, max:  56.0°C, mean:   6.0°C
+Virginia Beach       min: -34.9°C, max:  66.9°C, mean:  15.8°C
+Vladivostok          min: -41.1°C, max:  62.4°C, mean:   4.9°C
+Warsaw               min: -41.1°C, max:  57.1°C, mean:   8.5°C
+Washington, D.C.     min: -40.7°C, max:  61.5°C, mean:  14.6°C
+Wau                  min: -20.1°C, max:  77.2°C, mean:  27.8°C
+Wellington           min: -36.3°C, max:  63.3°C, mean:  12.9°C
+Whitehorse           min: -50.9°C, max:  51.5°C, mean:  -0.1°C
+Wichita              min: -37.1°C, max:  64.7°C, mean:  13.9°C
+Willemstad           min: -22.3°C, max:  79.8°C, mean:  28.0°C
+Winnipeg             min: -47.6°C, max:  54.8°C, mean:   3.0°C
+Wrocław              min: -42.0°C, max:  61.3°C, mean:   9.6°C
+Xi'an                min: -35.6°C, max:  61.7°C, mean:  14.1°C
+Yakutsk              min: -60.4°C, max:  40.4°C, mean:  -8.8°C
+Yangon               min: -23.0°C, max:  76.2°C, mean:  27.5°C
+Yaoundé              min: -23.7°C, max:  75.5°C, mean:  23.8°C
+Yellowknife          min: -52.8°C, max:  43.3°C, mean:  -4.3°C
+Yerevan              min: -38.5°C, max:  60.5°C, mean:  12.4°C
+Yinchuan             min: -38.7°C, max:  59.8°C, mean:   9.0°C
+Zagreb               min: -37.6°C, max:  60.3°C, mean:  10.7°C
+Zanzibar City        min: -25.4°C, max:  76.0°C, mean:  26.0°C
+Zürich               min: -40.2°C, max:  65.7°C, mean:   9.3°C
+Ürümqi               min: -40.2°C, max:  57.1°C, mean:   7.4°C
+İzmir                min: -35.2°C, max:  70.6°C, mean:  17.9°C
