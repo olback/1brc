@@ -10,6 +10,7 @@ mod values;
 use values::Values;
 
 const FILENAME: &str = "measurements.txt";
+const HASHMAP_CAPACITY: usize = 10_000;
 
 fn merge_maps<'k>(merge_map: &mut HashMap<&'k str, Values>, map2: &HashMap<&'k str, Values>) {
     for (key, value) in map2.iter() {
@@ -56,11 +57,11 @@ fn main() {
             // Spawn thread
             handles.push(scope.spawn(move || {
                 // Local map for this thread
-                let mut map = HashMap::<&str, Values>::with_capacity(10_000);
+                let mut map = HashMap::<&str, Values>::with_capacity(HASHMAP_CAPACITY);
 
                 // Process chunk, line by line
                 let data = &data_str[start..end];
-                for (i, line) in data.lines().enumerate() {
+                for line in data.lines() {
                     unsafe {
                         if let Some((city, Some(temp))) = line
                             // We know that the temperature is always at least 3 bytes, we should move back from the end by a constant amount before seeking the semicolon.
@@ -78,10 +79,6 @@ fn main() {
                         } else {
                             eprintln!("Invalid line: {}", line);
                         }
-
-                        if i % 10_000_000 == 0 {
-                            eprintln!("Core {core_id} processed {i} lines");
-                        }
                     }
                 }
                 map
@@ -93,7 +90,7 @@ fn main() {
         }
 
         // Merge results from threads
-        let mut map = HashMap::<&str, Values>::with_capacity(10_000);
+        let mut map = HashMap::<&str, Values>::with_capacity(HASHMAP_CAPACITY);
         for handle in handles {
             let handle_map = handle.join().unwrap();
             merge_maps(&mut map, &handle_map);
