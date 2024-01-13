@@ -10,7 +10,7 @@ extern "C" {
         fd: std::ffi::c_int,
         offset: i64,
     ) -> *mut std::ffi::c_void;
-    fn munmap(addr: *mut std::ffi::c_void, length: usize) -> std::ffi::c_int;
+    // fn munmap(addr: *mut std::ffi::c_void, length: usize) -> std::ffi::c_int;
 }
 
 pub struct MemoryMappedFile {
@@ -63,10 +63,11 @@ impl MemoryMappedFile {
 
 impl Drop for MemoryMappedFile {
     fn drop(&mut self) {
-        eprintln!("Dropping MemoryMappedFile {:p}", self.addr);
-        unsafe {
-            munmap(self.addr, self.length);
-        }
+        // What if we don't unmap? :shrug: I mean the OS will do it for us...
+        // eprintln!("Dropping MemoryMappedFile {:p}", self.addr);
+        // unsafe {
+        //     munmap(self.addr, self.length);
+        // }
     }
 }
 
