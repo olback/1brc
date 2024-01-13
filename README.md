@@ -3,7 +3,7 @@
 My attempt at solving the "[1 billion row challange](https://github.com/gunnarmorling/1brc)".
 
 ```
-$CARGO_TARGET_DIR/release/brc > output.txt  120.64s user 1.22s system 740% cpu 16.467 total
+$CARGO_TARGET_DIR/release/brc  87.53s user 0.80s system 779% cpu 11.333 total
 ```
 
 ### Test data:
