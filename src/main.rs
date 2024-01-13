@@ -1,5 +1,7 @@
 #[cfg(windows)]
-compile_error!("Windows is not supported. Please use something that supports mmap().");
+compile_error!(
+    "Windows is not supported. Please use something that supports mmap(), i.e. Linux/macOS."
+);
 
 use std::collections::HashMap;
 
@@ -10,23 +12,20 @@ mod values;
 use values::Values;
 
 const FILENAME: &str = "measurements.txt";
-const HASHMAP_CAPACITY: usize = 10_000;
+const HASHMAP_CAPACITY: usize = 1_000;
 
-fn merge_maps<'k>(merge_map: &mut HashMap<&'k str, Values>, map2: &HashMap<&'k str, Values>) {
-    for (key, value) in map2.iter() {
+fn merge_maps<'k>(merge_map: &mut HashMap<&'k str, Values>, mut map2: HashMap<&'k str, Values>) {
+    for (key, value) in map2.drain() {
         merge_map
-            .entry(*key)
-            .and_modify(|v| v.merge(value))
-            .or_insert_with(|| value.clone());
+            .entry(key)
+            .and_modify(|v| v.merge(&value))
+            .or_insert_with(|| value);
     }
 }
 
 fn main() {
     // Open file
     let file = MemoryMappedFile::new(std::path::Path::new(FILENAME)).expect("Unable to open file");
-
-    // Assume that the file is UTF-8
-    let data_str = unsafe { std::str::from_utf8_unchecked(&file) };
 
     // Split the file into chunks
     let n_cores = std::thread::available_parallelism().unwrap().get();
@@ -50,18 +49,30 @@ fn main() {
             }
 
             eprintln!(
-                "Core {core_id}: Start: {start}, End: {end}, Total: {}",
+                "Core {core_id}: Start: {start}, End: {end}, Size: {}",
                 end - start
             );
 
             // Spawn thread
             handles.push(scope.spawn(move || {
                 // Local map for this thread
-                let mut map = HashMap::<&str, Values>::with_capacity(HASHMAP_CAPACITY);
+                let mut map = HashMap::<&'static str, Values>::with_capacity(HASHMAP_CAPACITY);
+
+                // Open a local view of the file for this thread, seems to be faster than if all threads access the same memory mapped file.
+                let local_file = MemoryMappedFile::new(std::path::Path::new(FILENAME))
+                    .expect("Unable to open file");
+                let local_data_str =
+                    unsafe { std::str::from_utf8_unchecked(&local_file[start..end]) };
+
+                // Does not work, mmap seems to be picky about the offset/length. Must be page-aligned?
+                // let f = std::fs::File::open(FILENAME).expect("Unable to open file");
+                // let local_file =
+                //     MemoryMappedFile::new_with_file_size_offset(f, end - start, start as i64)
+                //         .expect("Unable to open file");
+                // let local_data_str = unsafe { std::str::from_utf8_unchecked(&local_file[0..(end - start)]) };
 
                 // Process chunk, line by line
-                let data = &data_str[start..end];
-                for line in data.lines() {
+                for line in local_data_str.lines() {
                     unsafe {
                         if let Some((city, Some(temp))) = line
                             // We know that the temperature is always at least 3 bytes, we should move back from the end by a constant amount before seeking the semicolon.
@@ -73,7 +84,8 @@ fn main() {
                                 (city, temp_str.get_unchecked(1..).parse().ok())
                             })
                         {
-                            map.entry(city)
+                            // Aaah, yes. Promote the lifetime of the city to 'static. This is **fine** as long as local_file is not dropped.
+                            map.entry(core::mem::transmute::<_, &'static str>(city))
                                 .and_modify(|values| values.add(temp))
                                 .or_insert_with(|| Values::new(temp));
                         } else {
@@ -81,7 +93,7 @@ fn main() {
                         }
                     }
                 }
-                map
+                (map, local_file)
             }));
 
             // Move to next chunk
@@ -91,14 +103,17 @@ fn main() {
 
         // Merge results from threads
         let mut map = HashMap::<&str, Values>::with_capacity(HASHMAP_CAPACITY);
+        // Make sure that we keep the mmapped files alive until we're done with the results
+        let mut mmapped_files = Vec::with_capacity(n_cores);
         for handle in handles {
-            let handle_map = handle.join().unwrap();
-            merge_maps(&mut map, &handle_map);
+            let (handle_map, mmapped_file) = handle.join().unwrap();
+            merge_maps(&mut map, handle_map);
+            mmapped_files.push(mmapped_file);
         }
 
         // It's faster to use a HashMap and sort the result than to use a BTreeMap.
         let mut key_values_pairs = map.drain().collect::<Vec<(_, _)>>();
-        key_values_pairs.sort_unstable_by(|(a, _), (b, _)| (*a).partial_cmp(*b).unwrap());
+        key_values_pairs.sort_unstable_by(|(a, _), (b, _)| (*a).partial_cmp(b).unwrap());
 
         for (city, values) in key_values_pairs.iter() {
             println!(
