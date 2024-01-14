@@ -61,7 +61,7 @@ fn main() {
         let mut handles = Vec::with_capacity(n_cores);
 
         // Find line boundaries
-        for core_id in 0..n_cores {
+        for _core_id in 0..n_cores {
             while file.get(end) != Some(&b'\n') {
                 end += 1;
                 if end >= file.len() {
@@ -70,10 +70,10 @@ fn main() {
                 }
             }
 
-            eprintln!(
-                "Core {core_id}: Start: {start}, End: {end}, Size: {}",
-                end - start
-            );
+            // eprintln!(
+            //     "Core {_core_id}: Start: {start}, End: {end}, Size: {}",
+            //     end - start
+            // );
 
             // Spawn thread
             handles.push(scope.spawn(move || {

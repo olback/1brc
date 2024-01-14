@@ -16,6 +16,11 @@ curl https://static.olback.dev/measurements.txt -o measurements.txt # ~ 14 GB, s
 RUSTFLAGS="-Ctarget-cpu=native" cargo b -r
 ```
 
+### Run:
+```
+./run.sh
+```
+
 ### CPU:
 
 ```
