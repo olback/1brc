@@ -2,15 +2,16 @@ use std::os::fd::AsRawFd;
 use std::os::unix::fs::MetadataExt;
 
 extern "C" {
-    fn mmap64(
+    fn mmap(
         addr: *mut std::ffi::c_void,
         length: usize,
         prot: std::ffi::c_int,
         flags: std::ffi::c_int,
         fd: std::ffi::c_int,
-        offset: i64,
+        offset: i32,
     ) -> *mut std::ffi::c_void;
-    // fn munmap(addr: *mut std::ffi::c_void, length: usize) -> std::ffi::c_int;
+    #[cfg(feature = "cleanup_on_drop")]
+    fn munmap(addr: *mut std::ffi::c_void, length: usize) -> std::ffi::c_int;
 }
 
 pub struct MemoryMappedFile {
@@ -22,30 +23,25 @@ impl MemoryMappedFile {
     const PROT_READ: std::ffi::c_int = 0x1;
     const MAP_FILE: std::ffi::c_int = 0x0;
     const MAP_PRIVATE: std::ffi::c_int = 0x2;
+    #[cfg(target_os = "linux")]
     const MAP_NONBLOCK: std::ffi::c_int = 0x10000;
+    #[cfg(not(target_os = "linux"))] // *bsd doesn't have MAP_NONBLOCK
+    const MAP_NONBLOCK: std::ffi::c_int = 0x0;
     const MAP_FAILED: *mut std::ffi::c_void = !0 as *mut std::ffi::c_void;
 
     pub fn new(path: &std::path::Path) -> std::io::Result<Self> {
         let file = std::fs::File::open(path)?;
         let meta = file.metadata()?;
-        let size = meta.size();
+        let size = meta.size() as usize;
 
-        Self::new_with_file_size_offset(file, size as usize, 0)
-    }
-
-    pub fn new_with_file_size_offset(
-        file: std::fs::File,
-        size: usize,
-        offset: i64,
-    ) -> std::io::Result<Self> {
         let addr = unsafe {
-            mmap64(
-                std::ptr::null_mut(),                                    // addr
-                size,                                                    // length
-                Self::PROT_READ,                                         // prot
-                Self::MAP_PRIVATE | Self::MAP_NONBLOCK | Self::MAP_FILE, // flags
-                file.as_raw_fd(),                                        // fd
-                offset,                                                  // offset
+            mmap(
+                std::ptr::null_mut(),                                    // void* addr
+                size,                                                    // size_t length
+                Self::PROT_READ,                                         // int prot
+                Self::MAP_PRIVATE | Self::MAP_NONBLOCK | Self::MAP_FILE, // int flags
+                file.as_raw_fd(),                                        // int fd
+                0,                                                       // off_t (aka i32) offset
             )
         };
 
@@ -64,10 +60,13 @@ impl MemoryMappedFile {
 impl Drop for MemoryMappedFile {
     fn drop(&mut self) {
         // What if we don't unmap? :shrug: I mean the OS will do it for us...
-        // eprintln!("Dropping MemoryMappedFile {:p}", self.addr);
-        // unsafe {
-        //     munmap(self.addr, self.length);
-        // }
+        #[cfg(feature = "cleanup_on_drop")]
+        {
+            eprintln!("Dropping MemoryMappedFile {:p}", self.addr);
+            unsafe {
+                munmap(self.addr, self.length);
+            }
+        }
     }
 }
 

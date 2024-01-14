@@ -3,7 +3,14 @@ compile_error!(
     "Windows is not supported. Please use something that supports mmap(), i.e. Linux/macOS."
 );
 
-use std::collections::HashMap;
+#[cfg(all(feature = "lexical-parse-float", feature = "fast-float"))]
+compile_error!("Please enable only one of the features 'lexical-parse-float' and 'fast-float'.");
+
+#[cfg(not(feature = "ahash"))]
+type Map<K, V> = std::collections::HashMap<K, V>;
+
+#[cfg(feature = "ahash")]
+type Map<K, V> = ahash::AHashMap<K, V>;
 
 mod mapped_file;
 use mapped_file::MemoryMappedFile;
@@ -14,13 +21,25 @@ use values::Values;
 const FILENAME: &str = "measurements.txt";
 const HASHMAP_CAPACITY: usize = 1_000;
 
-fn merge_maps<'k>(merge_map: &mut HashMap<&'k str, Values>, mut map2: HashMap<&'k str, Values>) {
+fn merge_maps<'k>(merge_map: &mut Map<&'k str, Values>, mut map2: Map<&'k str, Values>) {
     for (key, value) in map2.drain() {
         merge_map
             .entry(key)
             .and_modify(|v| v.merge(&value))
             .or_insert_with(|| value);
     }
+}
+
+#[inline(always)]
+fn parse_f32(s: &str) -> Option<f32> {
+    #[cfg(feature = "lexical-parse-float")]
+    return lexical_parse_float::parse(s).ok();
+
+    #[cfg(feature = "fast-float")]
+    return fast_float::parse(s).ok();
+
+    #[cfg(not(any(feature = "lexical-parse-float", feature = "fast-float")))]
+    return s.parse().ok();
 }
 
 fn main() {
@@ -56,20 +75,13 @@ fn main() {
             // Spawn thread
             handles.push(scope.spawn(move || {
                 // Local map for this thread
-                let mut map = HashMap::<&'static str, Values>::with_capacity(HASHMAP_CAPACITY);
+                let mut map = Map::<&'static str, Values>::with_capacity(HASHMAP_CAPACITY);
 
                 // Open a local view of the file for this thread, seems to be faster than if all threads access the same memory mapped file.
                 let local_file = MemoryMappedFile::new(std::path::Path::new(FILENAME))
                     .expect("Unable to open file");
                 let local_data_str =
                     unsafe { std::str::from_utf8_unchecked(&local_file[start..end]) };
-
-                // Does not work, mmap seems to be picky about the offset/length. Must be page-aligned?
-                // let f = std::fs::File::open(FILENAME).expect("Unable to open file");
-                // let local_file =
-                //     MemoryMappedFile::new_with_file_size_offset(f, end - start, start as i64)
-                //         .expect("Unable to open file");
-                // let local_data_str = unsafe { std::str::from_utf8_unchecked(&local_file[0..(end - start)]) };
 
                 // Process chunk, line by line
                 for line in local_data_str.lines() {
@@ -80,9 +92,7 @@ fn main() {
                             .rfind(';')
                             // SAFETY: We know that 'mid' is a valid index because we just found it by searching for ';'.
                             .map(|mid| (line.get_unchecked(..mid), line.get_unchecked(mid..)))
-                            .map(|(city, temp_str)| {
-                                (city, temp_str.get_unchecked(1..).parse().ok())
-                            })
+                            .map(|(city, temp_str)| (city, parse_f32(temp_str.get_unchecked(1..))))
                         {
                             // Aaah, yes. Promote the lifetime of the city to 'static. This is **fine** as long as local_file is not dropped.
                             map.entry(core::mem::transmute::<_, &'static str>(city))
@@ -102,7 +112,7 @@ fn main() {
         }
 
         // Merge results from threads
-        let mut map = HashMap::<&str, Values>::with_capacity(HASHMAP_CAPACITY);
+        let mut map = Map::<&str, Values>::with_capacity(HASHMAP_CAPACITY);
         // Make sure that we keep the mmapped files alive until we're done with the results
         let mut mmapped_files = Vec::with_capacity(n_cores);
         for handle in handles {
