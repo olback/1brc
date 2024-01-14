@@ -33,7 +33,10 @@ fn merge_maps<'k>(merge_map: &mut Map<&'k str, Values>, mut map2: Map<&'k str, V
 #[inline(always)]
 fn parse_f32(s: &str) -> Option<f32> {
     #[cfg(feature = "lexical-parse-float")]
-    return lexical_parse_float::parse(s).ok();
+    {
+        use lexical_parse_float::{format::STANDARD, parse::ParseFloat, Options};
+        return f32::fast_path_complete::<{ STANDARD }>(s.as_bytes(), &Options::new()).ok();
+    }
 
     #[cfg(feature = "fast-float")]
     return fast_float::parse(s).ok();
