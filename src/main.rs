@@ -19,7 +19,7 @@ mod values;
 use values::Values;
 
 const FILENAME: &str = "measurements.txt";
-const HASHMAP_CAPACITY: usize = 1_000;
+const HASHMAP_CAPACITY: usize = 10_000;
 
 fn merge_maps<'k>(merge_map: &mut Map<&'k str, Values>, mut map2: Map<&'k str, Values>) {
     for (key, value) in map2.drain() {
@@ -98,7 +98,7 @@ fn main() {
                             .map(|(city, temp_str)| (city, parse_f32(temp_str.get_unchecked(1..))))
                         {
                             // Aaah, yes. Promote the lifetime of the city to 'static. This is **fine** as long as local_file is not dropped.
-                            map.entry(core::mem::transmute::<_, &'static str>(city))
+                            map.entry(core::mem::transmute::<&str, &'static str>(city))
                                 .and_modify(|values| values.add(temp))
                                 .or_insert_with(|| Values::new(temp));
                         } else {

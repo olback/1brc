@@ -10,6 +10,11 @@ extern "C" {
         fd: std::ffi::c_int,
         offset: i32,
     ) -> *mut std::ffi::c_void;
+    fn madvise(
+        addr: *mut std::ffi::c_void,
+        length: usize,
+        advice: std::ffi::c_int,
+    ) -> std::ffi::c_int;
     #[cfg(feature = "cleanup_on_drop")]
     fn munmap(addr: *mut std::ffi::c_void, length: usize) -> std::ffi::c_int;
 }
@@ -22,12 +27,17 @@ pub struct MemoryMappedFile {
 impl MemoryMappedFile {
     const PROT_READ: std::ffi::c_int = 0x1;
     const MAP_FILE: std::ffi::c_int = 0x0;
+    const MAP_SHARED: std::ffi::c_int = 0x1;
     const MAP_PRIVATE: std::ffi::c_int = 0x2;
+    const MAP_POPULATE: std::ffi::c_int = 0x8000;
     #[cfg(target_os = "linux")]
     const MAP_NONBLOCK: std::ffi::c_int = 0x10000;
     #[cfg(not(target_os = "linux"))] // *bsd doesn't have MAP_NONBLOCK
     const MAP_NONBLOCK: std::ffi::c_int = 0x0;
     const MAP_FAILED: *mut std::ffi::c_void = !0 as *mut std::ffi::c_void;
+
+    const MADV_SEQUENTIAL: std::ffi::c_int = 2;
+    const MADV_WILLNEED: std::ffi::c_int = 3;
 
     pub fn new(path: &std::path::Path) -> std::io::Result<Self> {
         let file = std::fs::File::open(path)?;
@@ -35,14 +45,16 @@ impl MemoryMappedFile {
         let size = meta.size() as usize;
 
         let addr = unsafe {
-            mmap(
-                std::ptr::null_mut(),                                    // void* addr
-                size,                                                    // size_t length
-                Self::PROT_READ,                                         // int prot
-                Self::MAP_PRIVATE | Self::MAP_NONBLOCK | Self::MAP_FILE, // int flags
-                file.as_raw_fd(),                                        // int fd
-                0,                                                       // off_t (aka i32) offset
-            )
+            let addr = mmap(
+                std::ptr::null_mut(), // void* addr
+                size,                 // size_t length
+                Self::PROT_READ,      // int prot
+                Self::MAP_SHARED | Self::MAP_POPULATE | Self::MAP_NONBLOCK | Self::MAP_FILE, // int flags
+                file.as_raw_fd(), // int fd
+                0,                // off_t (aka i32) offset
+            );
+            madvise(addr, size, Self::MADV_SEQUENTIAL);
+            addr
         };
 
         if addr.is_null() || addr == Self::MAP_FAILED {
@@ -73,6 +85,7 @@ impl Drop for MemoryMappedFile {
 impl core::ops::Deref for MemoryMappedFile {
     type Target = [u8];
 
+    #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { std::slice::from_raw_parts(self.addr as *const u8, self.length) }
     }
